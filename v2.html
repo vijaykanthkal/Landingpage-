@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Background Image -->
+    <div class="bg-image"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">ExploreTheWorld</div>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#">Seasons ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Spring</a></li>
+                    <li><a href="#">Summer</a></li>
+                    <li><a href="#">Autumn</a></li>
+                    <li><a href="#">Winter</a></li>
+                    <li><a href="#">Monsoon</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Travel Types ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Mountains</a></li>
+                    <li><a href="#">Deserts</a></li>
+                    <li><a href="#">Snowy Regions</a></li>
+                    <li><a href="#">Rainforests</a></li>
+                    <li><a href="#">Islands</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Latest Trends ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Eco-Tourism</a></li>
+                    <li><a href="#">Adventure Travel</a></li>
+                    <li><a href="#">Luxury Resorts</a></li>
+                    <li><a href="#">Solo Travel</a></li>
+                    <li><a href="#">Cultural Tourism</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Popular Spots ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Europe</a></li>
+                    <li><a href="#">Asia</a></li>
+                    <li><a href="#">America</a></li>
+                    <li><a href="#">Africa</a></li>
+                    <li><a href="#">Australia</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Activities ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Hiking</a></li>
+                    <li><a href="#">Scuba Diving</a></li>
+                    <li><a href="#">Skiing</a></li>
+                    <li><a href="#">Wildlife Safari</a></li>
+                    <li><a href="#">Camping</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="#" onclick="showLogin()" class="btn">Login</a>
+            <a href="#" onclick="showSignup()" class="btn">Signup</a>
+        </div>
+    </nav>
+
+    <!-- Login Form -->
+    <div class="form-container" id="loginForm">
+        <h2>Login</h2>
+        <form>
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="form-container" id="signupForm">
+        <h2>Signup</h2>
+        <form>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="text" placeholder="Phone Number" required>
+            <input type="text" placeholder="Address" required>
+            <input type="number" placeholder="Age" required>
+            <select required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <button type="submit">Signup</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+
+    <!-- JavaScript for Login/Signup Toggle -->
+    <script>
+        function showLogin() {
+            document.getElementById("loginForm").style.display = "block";
+            document.getElementById("signupForm").style.display = "none";
+        }
+
+        function showSignup() {
+            document.getElementById("signupForm").style.display = "block";
+            document.getElementById("loginForm").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
